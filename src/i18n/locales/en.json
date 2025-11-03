@@ -1,0 +1,150 @@
+{
+  "app": {
+    "title": "Secure Word Encoder",
+    "subtitle": "Encrypted encoding using Russian words dictionary"
+  },
+  "modes": {
+    "encode": "Encode",
+    "decode": "Decode",
+    "switchTo": "Switch to {{mode}}"
+  },
+  "buttons": {
+    "convert": "Convert",
+    "loading": "Loading...",
+    "copy": "Copy",
+    "clear": "Clear",
+    "settings": "Settings",
+    "howItWorks": "How it works",
+    "runTests": "Run Tests",
+    "saveAndApply": "Save & Apply",
+    "cancel": "Cancel",
+    "gotIt": "Got it!",
+    "goToSettings": "Go to Settings"
+  },
+  "labels": {
+    "plainText": "Plain Text",
+    "encryptedWords": "Encrypted Words",
+    "characters": "characters",
+    "bits": "bits"
+  },
+  "placeholders": {
+    "enterText": "Enter text here...",
+    "resultWillAppear": "Result will appear here..."
+  },
+  "notifications": {
+    "encryptSuccess": "Text encrypted and encoded successfully!",
+    "decryptSuccess": "Text decoded and decrypted successfully!",
+    "copied": "{{label}} copied to clipboard!",
+    "setPassword": "Please set a password in Settings",
+    "passwordRequired": "Password Required",
+    "dictionaryLoaded": "Encoding dictionary loaded: {{size}} words",
+    "dictionaryLoadFailed": "Failed to load dictionary: {{error}}"
+  },
+  "passwordRequiredModal": {
+    "title": "Encryption failed",
+    "line1": "> Password required.",
+    "line2": "> Secure channel not established.",
+    "line3": "> Please provide password in [Settings > Password].",
+    "line4": "> Operation aborted."
+  },
+  "settings": {
+    "title": "Settings",
+    "encryption": {
+      "title": "Encryption",
+      "password": "Password",
+      "passwordDescription": "This password will be used to encrypt and decrypt your data. Keep it safe!",
+      "passwordPlaceholder": "Enter a strong password...",
+      "passwordRequired": "⚠️ Password is required for encryption",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
+      "cipher": "Cipher Algorithm",
+      "cipherDescription": "Encryption algorithm used to secure your data.",
+      "cipherInfo": "with PBKDF2 key derivation (10,000 iterations)",
+      "compression": "Compression Algorithm",
+      "compressionDescription": "Choose compression algorithm. Deflate offers better compression than Gzip.",
+      "compressionOptions": {
+        "deflate": "Deflate (Best compression)",
+        "gzip": "Gzip (Fast)",
+        "none": "None (No compression)"
+      }
+    },
+    "encoder": {
+      "title": "Encoder / Decoder",
+      "dictionarySource": "Dictionary Source",
+      "dictionarySourceDescription": "Choose between built-in dictionaries or provide your own custom word list.",
+      "builtIn": "Built-in Dictionary",
+      "builtInHint": "Pre-generated Russian word dictionaries",
+      "custom": "Custom Dictionary",
+      "customHint": "Provide your own word list",
+      "selectDictionary": "Select Dictionary",
+      "selectDictionaryDescription": "Choose from pre-generated Russian word dictionaries of various sizes.",
+      "bitsPerWord": "bits/word",
+      "customWordList": "Custom Word List",
+      "customWordListDescription": "Enter your words separated by commas or newlines. Dictionary size must be a power of 2 (e.g., 64, 128, 256, 512, 1024).",
+      "customWordListPlaceholder": "word1, word2, word3\nor one word per line...",
+      "totalWords": "Total",
+      "uniqueWords": "Unique",
+      "words": "words",
+      "currentConfiguration": "Current Configuration:",
+      "dictionary": "Dictionary",
+      "size": "Size"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "processSteps": {
+      "input": {
+        "title": "Input Text",
+        "description": "Your original message"
+      },
+      "compress": {
+        "title": "Compress",
+        "description": "Reduce data size"
+      },
+      "encrypt": {
+        "title": "Encrypt",
+        "description": "Secure with AES-256"
+      },
+      "encode": {
+        "title": "Encode",
+        "description": "Convert to words"
+      },
+      "output": {
+        "title": "Output Words",
+        "description": "The final result"
+      }
+    },
+    "detailsTitle": "Under the Hood",
+    "details": {
+      "whatIs": {
+        "title": "What is Word Encoding?",
+        "description": "It's a method to represent binary data using a dictionary of words, making it more human-readable and memorable than traditional encoding schemes like Base64."
+      },
+      "compression": {
+        "title": "Data Compression",
+        "description": "Before encryption, your text is compressed using algorithms like Gzip or Deflate. This reduces the overall size of the data, making the final output shorter."
+      },
+      "encryption": {
+        "title": "AES-256 Encryption",
+        "description": "Your data is encrypted using the Advanced Encryption Standard (AES) with a 256-bit key. The key is derived from your password using PBKDF2, a robust key-stretching algorithm."
+      },
+      "wordMapping": {
+        "title": "Binary to Word Mapping",
+        "description": "The encrypted binary data is split into chunks. Each chunk's value is used as an index to pick a word from the selected dictionary. For a dictionary of {{size}} words, each word represents {{bits}} bits of data."
+      }
+    }
+  },
+  "testRunner": {
+    "title": "Test Runner",
+    "run": "Run Tests",
+    "running": "Running...",
+    "export": "Export JSON",
+    "copy": "Copy",
+    "clickToStart": "Click \"Run Tests\" to start...",
+    "quickStats": "Quick Stats",
+    "totalTests": "Total Tests",
+    "passed": "Passed",
+    "failed": "Failed",
+    "avgWords": "Avg Words"
+  }
+}

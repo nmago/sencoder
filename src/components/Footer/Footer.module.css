@@ -1,0 +1,40 @@
+.footer {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.typewriter {
+  font-family: 'Courier New', Courier, monospace;
+  color: #E0E0E0;
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: .1em;
+  text-shadow: 
+    0 0 5px rgba(224, 224, 224, 0.2),
+    0 0 10px rgba(224, 224, 224, 0.2);
+  animation: glow 2.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+      0 0 5px rgba(224, 224, 224, 0.2),
+      0 0 10px rgba(224, 224, 224, 0.2);
+  }
+  to {
+    text-shadow: 
+      0 0 10px rgba(224, 224, 224, 0.5),
+      0 0 20px rgba(224, 224, 224, 0.5);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+  .typewriter {
+    font-size: 0.8rem;
+  }
+}
